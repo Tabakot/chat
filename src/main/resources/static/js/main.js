@@ -26,6 +26,9 @@ function disconnect() {
 
 function sendMessage(message) {
     stompClient.send("/app/changeMessage", {}, JSON.stringify(message));
+    if (message.text.substr(0,5).includes("Олег ", 0)) {
+        stompClient.send("/app/botMessage", {}, JSON.stringify(message));
+    }
 }
 
 function getIndex(list, id) {
