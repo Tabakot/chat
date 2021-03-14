@@ -21,7 +21,7 @@ public class AssistantService {
     private User assistant;
     private String[] timeWord = {"время", "времени", "часов", "час"};
     private String[] dateWord = {"число", "день", "год", "дата"};
-    private String[] weatherWord = {"погода", "температура", "холодно", "жарко"};
+    private String[] weatherWord = {"погода", "температура", "холодно", "жарко", "градусов"};
 
     public AssistantService(){
         User assistant = new User();
