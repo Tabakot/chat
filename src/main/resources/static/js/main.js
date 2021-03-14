@@ -1,4 +1,4 @@
-var messageApi = Vue.resource('/message{/id}')
+    var messageApi = Vue.resource('/message{/id}')
 var stompClient = null
 const handlers = []
 
