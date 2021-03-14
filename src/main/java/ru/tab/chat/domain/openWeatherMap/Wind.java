@@ -1,10 +1,10 @@
 package ru.tab.chat.domain.openWeatherMap;
 
 public class Wind {
-    public int speed;
+    public double speed;
     public int deg;
 
-    public int getSpeed() {
+    public double getSpeed() {
         return this.speed;
     }
 

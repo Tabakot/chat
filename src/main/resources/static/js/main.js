@@ -26,7 +26,7 @@ function disconnect() {
 
 function sendMessage(message) {
     stompClient.send("/app/changeMessage", {}, JSON.stringify(message));
-    if (message.text.substr(0,5).includes("Олег ", 0)) {
+    if (message.text.substr(0,4).includes("Олег", 0)) {
         stompClient.send("/app/botMessage", {}, JSON.stringify(message));
     }
 }
@@ -50,7 +50,7 @@ Vue.component('message-form', {
     template:
     '<div>' +
         '<messages-list :messages="messages" />' +
-        '<input type="text" placeholder="Write something" v-model="text" />' +
+        '<input type="text" placeholder="Write something" v-model="text" @keyup.enter="send" />' +
         '<input type="button" value="Send" @click="send" />' +
     '</div>',
     methods: {
